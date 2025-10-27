@@ -1,0 +1,88 @@
+/* Paleta navideña */
+:root {
+    --rojo-navidad: #b30000;
+    --verde-navidad: #006400;
+    --dorado: #d4af37;
+    --blanco: #ffffff;
+    --fondo: #f9f9f9;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--fondo);
+    color: var(--verde-navidad);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, var(--rojo-navidad), var(--verde-navidad));
+    color: var(--blanco);
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px var(--dorado);
+}
+
+/* Contenedor del video */
+.video-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Wrapper para mantener relación 16:9 */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    border: 5px solid var(--dorado);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    background: var(--verde-navidad);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+footer {
+    background: var(--verde-navidad);
+    color: var(--blanco);
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--dorado);
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .video-container {
+        padding: 1rem;
+    }
+}
