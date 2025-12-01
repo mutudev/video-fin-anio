@@ -59,12 +59,14 @@ h1 {
     background: var(--verde-navidad);
 }
 
-.video-wrapper iframe {
+/* 👉 Ajuste para video */
+.video-wrapper video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover; /* o 'contain' si quieres que no corte el video */
 }
 
 /* Footer */
